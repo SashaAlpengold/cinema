@@ -1,5 +1,6 @@
 package com.example.jopa
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -19,7 +20,8 @@ class SignInActivity : AppCompatActivity() {
     fun login(view: View) {
         if (email.text.toString().isNotEmpty() && password.text.toString().isNotEmpty()) {
             if (email.text.toString() == "admin" && password.text.toString() == "admin") {
-
+//                val intent = Intent(this, ::class.java)
+//                startActivity(intent)
             } else{
                 var alert = AlertDialog.Builder(this)
                     .setTitle("Error")

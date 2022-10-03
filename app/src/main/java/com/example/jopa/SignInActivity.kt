@@ -21,7 +21,7 @@ class SignInActivity : AppCompatActivity() {
             if (email.text.toString() == "admin" && password.text.toString() == "admin") {
 
             } else{
-                var alert2 = AlertDialog.Builder(this)
+                var alert = AlertDialog.Builder(this)
                     .setTitle("Error")
                     .setMessage("Неверный логин или пароль")
                     .setPositiveButton("ok",null)
@@ -29,7 +29,7 @@ class SignInActivity : AppCompatActivity() {
                     .show()
             }
         } else {
-            var alert1 = AlertDialog.Builder(this)
+            var alertEmpty = AlertDialog.Builder(this)
                 .setTitle("Error")
                 .setMessage("Не все поля заполнены")
                 .setPositiveButton("ok",null)

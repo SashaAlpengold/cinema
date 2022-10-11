@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
+import androidx.constraintlayout.widget.ConstraintLayout
 
 class SignInActivity : AppCompatActivity() {
     lateinit var email:EditText
@@ -20,8 +21,8 @@ class SignInActivity : AppCompatActivity() {
     fun login(view: View) {
         if (email.text.toString().isNotEmpty() && password.text.toString().isNotEmpty()) {
             if (email.text.toString() == "admin" && password.text.toString() == "admin") {
-//                val intent = Intent(this, ::class.java)
-//                startActivity(intent)
+                val intent = Intent(this, MenuActivity::class.java)
+                startActivity(intent)
             } else{
                 var alert = AlertDialog.Builder(this)
                     .setTitle("Error")

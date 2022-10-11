@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="abouts">
+        <item>Action, comedy</item>
+        <item>Action, comedy</item>
+        <item>Action, comedy</item>
+        <item>Action, comedy</item>
+        <item>Action, comedy</item>
+        <item>Action, comedy</item>
+        <item>Action, comedy</item>
+        <item>Action, comedy</item>
+    </string-array>
+    <string-array name="titles">
+        <item>Агент Джонни Инглиш</item>
+        <item>Агент Джонни Инглиш</item>
+        <item>Агент Джонни Инглиш</item>
+        <item>Агент Джонни Инглиш</item>
+        <item>Агент Джонни Инглиш</item>
+        <item>Агент Джонни Инглиш</item>
+        <item>Агент Джонни Инглиш</item>
+        <item>Агент Джонни Инглиш</item>
+    </string-array>
+</resources>

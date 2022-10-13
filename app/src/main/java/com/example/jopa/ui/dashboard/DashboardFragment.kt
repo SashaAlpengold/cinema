@@ -1,5 +1,7 @@
 package com.example.jopa.ui.dashboard
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.jopa.ProfileActivity
 import com.example.jopa.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -34,9 +37,14 @@ class DashboardFragment : Fragment() {
 //        dashboardViewModel.text.observe(viewLifecycleOwner) {
 //            textView.text = it
 //        }
-        binding.profile.setOnClickListener{
-            binding.name.text = "click successful"
-        }
+        val thisContext = activity?.applicationContext
+        binding.profile.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                val intent = Intent(thisContext, ProfileActivity::class.java)
+                startActivity(intent)
+            }
+
+        })
 
         return root
     }

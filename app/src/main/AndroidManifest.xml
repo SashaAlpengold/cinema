@@ -14,6 +14,15 @@
         android:theme="@style/Theme.Jopa"
         tools:targetApi="31">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Jopa.OrangeActionBar"
+            android:label="profile">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MenuActivity"
             android:exported="false"
             android:label="@string/title_activity_menu">

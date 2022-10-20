@@ -7,9 +7,11 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.widget.addTextChangedListener
 import com.google.android.material.internal.TextWatcherAdapter
 import java.util.*
@@ -19,7 +21,7 @@ class ProfileActivity : AppCompatActivity() {
     lateinit var birthdayEdt: EditText
     lateinit var numberEdt : EditText
 
-    @SuppressLint("RestrictedApi")
+    @SuppressLint("RestrictedApi", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -103,6 +105,7 @@ class ProfileActivity : AppCompatActivity() {
 
     fun saveChanges(view: View) {
         findViewById<TextView>(R.id.test).text = numberEdt.text.toString().replace(Regex("""[(,),\-, ]"""), "")
+        findViewById<ConstraintLayout>(R.id.profileLayout).clearFocus()
     }
 
 

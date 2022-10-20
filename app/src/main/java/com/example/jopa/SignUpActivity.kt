@@ -23,6 +23,7 @@ import com.google.firebase.storage.UploadTask
 import java.util.*
 
 class SignUpActivity : AppCompatActivity() {
+
     lateinit var filePath: Uri
 
     lateinit var backButton: ImageButton
@@ -61,13 +62,14 @@ class SignUpActivity : AppCompatActivity() {
         surnameEdt = findViewById(R.id.edtSurname)
         dadNameEdt = findViewById(R.id.edtDadName)
 
+        auth = Firebase.auth
+        authLogin = FirebaseAuth.getInstance()
+        storage = FirebaseStorage.getInstance()
+        storageReference = storage.reference
 
-        backButton.setOnClickListener{
-            finish()
-        }
-        avatarCard.setOnClickListener{
-            chooseImage()
-        }
+
+        backButton.setOnClickListener{ finish() }
+        avatarCard.setOnClickListener{ chooseImage() }
 
         birthdayEdt.setOnClickListener{
             val c = Calendar.getInstance()
@@ -132,16 +134,7 @@ class SignUpActivity : AppCompatActivity() {
             }
         })
 
-        auth = Firebase.auth
-        authLogin = FirebaseAuth.getInstance()
-        storage = FirebaseStorage.getInstance()
-        storageReference = storage.reference
-
-        if (::signUpButton.isInitialized) {
-            signUpButton.setOnClickListener {
-                signUpUser()
-            }
-        }
+        if (::signUpButton.isInitialized) { signUpButton.setOnClickListener { signUpUser() } }
 
     }
 
@@ -211,9 +204,7 @@ class SignUpActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) {
             if (it.isSuccessful) {
                 Toast.makeText(this, "Successfully Singed Up", Toast.LENGTH_SHORT).show()
-                println("login")
                 login()
-                println("login")
                 if (auth.currentUser !== null) {
                     if(::filePath.isInitialized){
                         var uid = auth.currentUser?.uid
@@ -221,7 +212,6 @@ class SignUpActivity : AppCompatActivity() {
                     }
                 }
             } else {
-                println("otladka")
                 Toast.makeText(this, "Singed Up Failed!", Toast.LENGTH_SHORT).show()
             }
         }

@@ -56,7 +56,7 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
-        android:text="admin"
+        android:text="ii@oo.ru"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -68,7 +68,7 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Password"
-        android:text="admin"
+        android:text="11111111"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtEmail" />

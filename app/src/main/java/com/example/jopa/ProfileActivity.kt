@@ -94,7 +94,6 @@ class ProfileActivity : AppCompatActivity() {
             override fun afterTextChanged(p0: Editable?) {
             }
         })
-        var numberPhone:String = numberEdt.getText().toString().replace("^(\\+\\)|\\D+","")
     }
 
     override fun onSupportNavigateUp() : Boolean{
@@ -103,7 +102,7 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     fun saveChanges(view: View) {
-        findViewById<TextView>(R.id.test).text = numberEdt.text
+        findViewById<TextView>(R.id.test).text = numberEdt.text.toString().replace(Regex("""[(,),\-, ]"""), "")
     }
 
 

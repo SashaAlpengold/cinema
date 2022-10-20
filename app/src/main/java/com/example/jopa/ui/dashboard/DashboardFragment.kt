@@ -38,13 +38,10 @@ class DashboardFragment : Fragment() {
 //            textView.text = it
 //        }
         val thisContext = activity?.applicationContext
-        binding.profile.setOnClickListener(object: View.OnClickListener{
-            override fun onClick(p0: View?) {
-                val intent = Intent(thisContext, ProfileActivity::class.java)
-                startActivity(intent)
-            }
-
-        })
+        binding.profile.setOnClickListener {
+            val intent = Intent(thisContext, ProfileActivity::class.java)
+            startActivity(intent)
+        }
 
         return root
     }

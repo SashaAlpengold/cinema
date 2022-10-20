@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "343447078697",
+    "project_id": "cinema-da512",
+    "storage_bucket": "cinema-da512.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343447078697:android:95d896c5109874f0a75938",
+        "android_client_info": {
+          "package_name": "com.example.jopa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343447078697-d5okq0mhqjfmo21ihhf5kcsn758rjkda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCg-XvPpIZiHVK99gsEzlKqTa9y1kSX9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343447078697-d5okq0mhqjfmo21ihhf5kcsn758rjkda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

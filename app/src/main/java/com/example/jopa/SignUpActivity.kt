@@ -22,7 +22,6 @@ import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
 import java.util.*
 
-
 class SignUpActivity : AppCompatActivity() {
     lateinit var filePath: Uri
 
@@ -212,12 +211,17 @@ class SignUpActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) {
             if (it.isSuccessful) {
                 Toast.makeText(this, "Successfully Singed Up", Toast.LENGTH_SHORT).show()
+                println("login")
                 login()
+                println("login")
                 if (auth.currentUser !== null) {
-                    var uid = auth.currentUser?.uid
-                    uploadImage(uid.toString())
+                    if(::filePath.isInitialized){
+                        var uid = auth.currentUser?.uid
+                        uploadImage(uid.toString())
+                    }
                 }
             } else {
+                println("otladka")
                 Toast.makeText(this, "Singed Up Failed!", Toast.LENGTH_SHORT).show()
             }
         }

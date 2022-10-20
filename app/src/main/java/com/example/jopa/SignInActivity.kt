@@ -1,5 +1,6 @@
 package com.example.jopa
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,6 +18,7 @@ class SignInActivity : AppCompatActivity() {
 
     lateinit var auth: FirebaseAuth
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
@@ -25,6 +27,7 @@ class SignInActivity : AppCompatActivity() {
         passwordEdt = findViewById(R.id.edtPassword)
 
         auth = FirebaseAuth.getInstance()
+        loginBtn = findViewById(R.id.loginButton)
 
         loginBtn.setOnClickListener {
             login()
@@ -57,5 +60,10 @@ class SignInActivity : AppCompatActivity() {
                 .create()
                 .show()
         }
+    }
+
+    fun signUp(view: View) {
+        val intent = Intent(this, SignUpActivity::class.java)
+        startActivity(intent)
     }
 }

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.appcompat.app.AppCompatDelegate
-//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 --- token github
+//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 --- token github
 class LaunchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
